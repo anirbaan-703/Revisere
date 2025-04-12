@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card Maker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="container">
+            <h1>Flash Card Maker</h1>
+            <!-- Basic Navigation Placeholder -->
+            <nav>
+                <!-- Future links can go here -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <div class="container">
+            <section class="creation-panel" aria-labelledby="creation-heading">
+                <h2 id="creation-heading">Create New Flash Cards</h2>
+                <form id="card-form">
+                    <div class="form-group">
+                        <label for="deck-name">Deck Name:</label>
+                        <input type="text" id="deck-name" placeholder="Enter a name for your deck" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-question">Question:</label>
+                        <textarea id="card-question" rows="3" placeholder="Enter the question" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-answer">Answer:</label>
+                        <textarea id="card-answer" rows="3" placeholder="Enter the answer" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" id="add-card-btn" class="btn btn-primary">Add Card</button>
+                        <button type="button" id="save-deck-btn" class="btn btn-secondary">Save Deck</button>
+                    </div>
+                    <p id="feedback-message" class="feedback" aria-live="polite"></p>
+                     <p id="deck-card-count" class="feedback"></p>
+                </form>
+            </section>
+
+            <section class="preview-panel" aria-labelledby="preview-heading">
+                <h2 id="preview-heading">Card Preview / Current Deck</h2>
+                 <!-- Card Preview Area -->
+                <div class="card-preview-container">
+                    <div id="card-preview" class="card" aria-live="polite">
+                        <div class="card-inner">
+                            <div class="card-face card-front">
+                                <p>(Question will appear here)</p>
+                            </div>
+                            <div class="card-face card-back">
+                                <p>(Answer will appear here)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="flip-instruction">Click card to flip</small>
+                </div>
+
+                <!-- Optional: Area to list cards in current deck (simplified for now) -->
+                <!-- <div id="current-deck-list"> -->
+                    <!-- Cards will be dynamically added here if needed in future phases -->
+                <!-- </div> -->
+            </section>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <div class="container">
+            <p>© 2023 Flash Card Maker</p>
+        </div>
+    </footer>
+
+    <!-- Link JavaScript Files -->
+    <script src="js/card.js"></script> <!-- card.js included for potential future structure, though might be empty now -->
+    <script src="js/app.js"></script>
+</body>
+</html>
